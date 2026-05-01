@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The $568,059 Question: How Sacramento Fired 26 Park Workers To Save A Bureaucracy</title>
+<meta name="description" content="An investigation into the Sacramento FY2026/27 Proposed Operating Budget, which closes a $66.2 million deficit while preserving and expanding equity-coded bureaucracy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,700;6..96,800;6..96,900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #111111;
+    --paper: #ffffff;
+    --paper-soft: #f7f7f5;
+    --rule: #1a1a1a;
+    --rule-soft: #d8d6d2;
+    --red: #b32a1d;
+    --gold: #8b6a1f;
+    --muted: #555049;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.65;
+    font-feature-settings: "kern" 1, "liga" 1, "onum" 1;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 28px; position: relative; }
+
+  /* Masthead */
+  .masthead {
+    border-top: 4px double var(--rule);
+    border-bottom: 1px solid var(--rule);
+    margin-top: 18px;
+    padding: 14px 0 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: 'Bodoni Moda', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 11px;
+    color: var(--muted);
+  }
+  .masthead .brand {
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 800;
+    font-size: 14px;
+    letter-spacing: 0.32em;
+    color: var(--ink);
+  }
+  .masthead .date { letter-spacing: 0.14em; }
+
+  .kicker {
+    margin-top: 60px;
+    text-align: center;
+    font-family: 'Bodoni Moda', serif;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 0.34em;
+    font-size: 12px;
+    color: var(--red);
+    font-weight: 500;
+  }
+
+  h1.head {
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 900;
+    font-size: clamp(40px, 6.6vw, 78px);
+    line-height: 0.95;
+    letter-spacing: -0.025em;
+    text-align: center;
+    margin: 18px auto 0;
+    max-width: 820px;
+    color: var(--ink);
+  }
+  h1.head em {
+    font-style: italic;
+    font-weight: 500;
+    color: var(--red);
+  }
+
+  .subhead {
+    margin-top: 22px;
+    text-align: center;
+    font-family: 'Source Serif 4', serif;
+    font-size: 22px;
+    line-height: 1.45;
+    color: var(--muted);
+    font-style: italic;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+  }
+
+  .byline-rule {
+    margin: 38px auto 50px;
+    width: 220px;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+    position: relative;
+  }
+  .byline-rule::after {
+    content: '◆';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--paper);
+    padding: 0 12px;
+    font-size: 12px;
+    color: var(--gold);
+  }
+
+  /* Lede figures */
+  .lede-figures {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 0;
+    align-items: stretch;
+    margin: 50px 0;
+    border-top: 3px solid var(--rule);
+    border-bottom: 3px solid var(--rule);
+    padding: 38px 0;
+  }
+  .lede-fig { text-align: center; padding: 0 16px; }
+  .lede-fig .label {
+    font-family: 'Bodoni Moda', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .lede-fig .name {
+    font-family: 'Source Serif 4', serif;
+    font-size: 17px;
+    line-height: 1.3;
+    margin-bottom: 18px;
+    font-style: italic;
+    color: var(--ink);
+  }
+  .lede-fig .amount {
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 800;
+    font-size: clamp(32px, 5.2vw, 54px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+  .lede-fig.right .amount { color: var(--red); }
+  .lede-divider { width: 1px; background: var(--rule); position: relative; }
+  .lede-divider::after {
+    content: 'VS';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--paper);
+    padding: 8px 6px;
+    font-family: 'Bodoni Moda', serif;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--muted);
+    font-size: 13px;
+    letter-spacing: 0.1em;
+  }
+  .lede-caption {
+    text-align: center;
+    margin-top: 18px;
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--muted);
+  }
+  .lede-caption strong {
+    color: var(--red);
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  /* Article body */
+  .article {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 19px;
+    line-height: 1.7;
+    color: var(--ink);
+    margin: 0 auto;
+    max-width: 680px;
+  }
+  .article > p {
+    margin-bottom: 22px;
+    text-align: justify;
+    hyphens: auto;
+  }
+  .article > p:first-of-type::first-letter {
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 800;
+    font-size: 76px;
+    line-height: 0.85;
+    float: left;
+    padding: 4px 10px 0 0;
+    color: var(--ink);
+  }
+
+  /* Section heads */
+  h2.section {
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 800;
+    font-size: 28px;
+    margin: 60px 0 22px;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+    border-top: 1px solid var(--rule);
+    padding-top: 18px;
+    color: var(--ink);
+  }
+  h2.section .num {
+    color: var(--red);
+    font-style: italic;
+    font-weight: 500;
+    margin-right: 12px;
+    font-size: 22px;
+  }
+
+  /* Blockquote */
+  blockquote {
+    margin: 32px 0;
+    padding: 24px 30px;
+    border-left: 4px solid var(--red);
+    background: var(--paper-soft);
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 18.5px;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  blockquote .source {
+    display: block;
+    margin-top: 14px;
+    font-style: normal;
+    font-family: 'Bodoni Moda', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  /* Ledger */
+  .ledger {
+    margin: 38px 0;
+    border-top: 2px solid var(--rule);
+    border-bottom: 2px solid var(--rule);
+  }
+  .ledger-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    padding: 20px 4px;
+    border-bottom: 1px solid var(--rule-soft);
+    align-items: baseline;
+  }
+  .ledger-row:last-child { border-bottom: 0; }
+  .ledger-name {
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.25;
+    color: var(--ink);
+  }
+  .ledger-desc {
+    font-family: 'Source Serif 4', serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--muted);
+    margin-top: 6px;
+    font-style: italic;
+  }
+  .ledger-amount {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--ink);
+    text-align: right;
+    white-space: nowrap;
+  }
+  .ledger-amount .fte {
+    display: block;
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 400;
+    margin-top: 2px;
+    letter-spacing: 0.08em;
+  }
+  .ledger-total {
+    background: var(--paper-soft);
+    padding: 22px 4px;
+    margin-top: 0;
+    border-top: 4px double var(--rule);
+    border-bottom: 0 !important;
+  }
+  .ledger-total .ledger-name {
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--ink);
+  }
+  .ledger-total .ledger-amount {
+    color: var(--red);
+    font-size: 22px;
+  }
+
+  /* Compare */
+  .compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin: 50px 0;
+    border-top: 2px solid var(--rule);
+    border-bottom: 2px solid var(--rule);
+  }
+  .compare-col { padding: 30px 24px; }
+  .compare-col.left {
+    border-right: 1px solid var(--rule);
+    background: rgba(179, 42, 29, 0.04);
+  }
+  .compare-col.right { background: rgba(139, 106, 31, 0.04); }
+  .compare-head {
+    font-family: 'Bodoni Moda', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .compare-title {
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 1.1;
+    margin-bottom: 22px;
+    color: var(--ink);
+  }
+  .compare-col.left .compare-title { color: var(--red); }
+  .compare-list { list-style: none; }
+  .compare-list li {
+    padding: 10px 0;
+    border-bottom: 1px dotted var(--rule-soft);
+    font-family: 'Source Serif 4', serif;
+    font-size: 15.5px;
+    line-height: 1.45;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    color: var(--ink);
+  }
+  .compare-list li:last-child { border-bottom: 0; }
+  .compare-list .item-amount {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--muted);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .compare-list .item-detail {
+    display: block;
+    font-size: 12.5px;
+    color: var(--muted);
+    font-style: italic;
+    margin-top: 3px;
+    line-height: 1.35;
+  }
+  .compare-list li.compare-total {
+    margin-top: 12px;
+    padding-top: 14px;
+    border-top: 3px double var(--rule);
+    border-bottom: 0;
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+  .compare-list li.compare-total .item-amount {
+    font-size: 17px;
+    color: var(--ink);
+    font-weight: 700;
+  }
+  .compare-col.left .compare-list li.compare-total .item-amount { color: var(--red); }
+
+  /* Callout */
+  .callout {
+    border: 2px solid var(--ink);
+    padding: 24px 28px;
+    margin: 36px 0;
+    background: var(--paper-soft);
+    position: relative;
+  }
+  .callout-label {
+    position: absolute;
+    top: -10px;
+    left: 22px;
+    background: var(--paper);
+    padding: 0 10px;
+    font-family: 'Bodoni Moda', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 10px;
+    color: var(--ink);
+    font-weight: 700;
+  }
+  .callout p {
+    margin: 0;
+    font-size: 17.5px;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+
+  /* Math box (light) */
+  .math-box {
+    background: var(--paper-soft);
+    color: var(--ink);
+    padding: 36px 30px;
+    margin: 50px 0;
+    border: 2px solid var(--ink);
+  }
+  .math-box .math-label {
+    font-family: 'Bodoni Moda', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 11px;
+    color: var(--red);
+    margin-bottom: 18px;
+    font-weight: 700;
+  }
+  .math-box .math-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    font-family: 'Source Serif 4', serif;
+    font-size: 16px;
+    color: var(--ink);
+  }
+  .math-box .math-row:last-child { border-bottom: 0; }
+  .math-box .math-amount {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .math-box .math-row.total {
+    margin-top: 14px;
+    padding-top: 18px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 0;
+    font-size: 19px;
+    font-weight: 700;
+  }
+  .math-box .math-row.total .math-amount {
+    color: var(--red);
+    font-size: 24px;
+  }
+
+  /* Footer */
+  .article-foot {
+    margin-top: 80px;
+    padding: 30px 0 60px;
+    border-top: 4px double var(--rule);
+    font-family: 'Source Serif 4', serif;
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--muted);
+    text-align: center;
+    font-style: italic;
+  }
+  .article-foot a {
+    color: var(--ink);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+  .article-foot a:hover { color: var(--red); }
+
+  /* Tags */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin: 22px 0;
+  }
+  .tag {
+    font-family: 'Bodoni Moda', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 10px;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 5px 10px;
+    font-weight: 600;
+  }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    body { font-size: 17px; line-height: 1.6; }
+    .article { font-size: 18px; line-height: 1.65; }
+    .article > p:first-of-type::first-letter { font-size: 60px; }
+    .lede-figures { grid-template-columns: 1fr; gap: 16px; padding: 26px 0; }
+    .lede-divider { display: none; }
+    .lede-fig.right { padding-top: 22px; border-top: 1px solid var(--rule); }
+    .compare { grid-template-columns: 1fr; }
+    .compare-col.left { border-right: 0; border-bottom: 1px solid var(--rule); }
+    h2.section { font-size: 24px; }
+    .ledger-row { grid-template-columns: 1fr; gap: 8px; }
+    .ledger-amount { text-align: left; }
+    .compare-list li { flex-direction: column; gap: 2px; }
+    blockquote { padding: 20px 22px; font-size: 17px; }
+    .math-box { padding: 26px 20px; }
+  }
+  @media (max-width: 480px) {
+    .wrap { padding: 0 18px; }
+    .masthead { font-size: 10px; padding: 12px 0 10px; }
+    .masthead .brand { font-size: 12px; letter-spacing: 0.22em; }
+    .article > p:first-of-type::first-letter { font-size: 48px; padding-right: 8px; }
+  }
+  @media print {
+    body { background: white; }
+    .lede-figures, .compare, .ledger { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <div class="brand">May 2026</div>
+  <div class="date">Sacramento Budget Investigation</div>
+</header>
+
+<div class="kicker">An Investigation</div>
+
+<h1 class="head">The City Fired 26 Park Workers. <em>The Office of Diversity and Equity Cost the Same.</em></h1>
+
+<p class="subhead">Sacramento's first Black woman city manager closed a $66.2 million deficit by firing 46 frontline workers while protecting and expanding a bureaucracy that exists to write equity reports, build equity dashboards, and require an "equity lens" on every future budget.</p>
+
+<p style="text-align:center; margin-top:24px; font-family:'Bodoni Moda', serif; font-size:15px; letter-spacing:0.36em; text-transform:uppercase; color:var(--ink); font-weight:700;">Don't Shoot The Data</p>
+
+<div class="byline-rule"></div>
+
+<section class="lede-figures">
+  <div class="lede-fig">
+    <div class="label">Cut from the budget</div>
+    <div class="name">26 Park Maintenance Workers <br>(Park Maintenance Division)</div>
+    <div class="amount">$567,428</div>
+    <div style="font-family:'Source Serif 4', serif; font-size:13px; font-style:italic; color:var(--muted); margin-top:10px; line-height:1.4;">Saved by firing the workers and outsourcing the work to a contractor.</div>
+  </div>
+  <div class="lede-divider"></div>
+  <div class="lede-fig right">
+    <div class="label">Funded in the budget, raised 9.9 percent</div>
+    <div class="name">Office of Diversity and Equity <br>(Human Resources, 3.0 FTE)</div>
+    <div class="amount">$568,059</div>
+    <div style="font-family:'Source Serif 4', serif; font-size:14px; font-style:italic; color:var(--ink); margin-top:10px; line-height:1.4;"><strong style="color:var(--red); font-style:normal;">Up from $517,019 last year.</strong> The City Manager rejected three proposals to cut this office.</div>
+  </div>
+</section>
+
+<p class="lede-caption">The two figures are <strong>$631 apart</strong>. And this is only one office. The full equity-coded spending kept in this budget totals <strong>$48 million</strong>, itemized below.</p>
+
+<article class="article">
+
+<p>On April 29, 2026, Sacramento City Manager Maraskeshia Smith released her first proposed operating budget. Smith took office on January 5, 2026, after being <a href="https://www.cbsnews.com/sacramento/news/maraskeshia-smith-first-black-woman-sacramento-city-manager/" target="_blank" rel="noopener" style="color: var(--ink); text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px;">hired and celebrated</a> as Sacramento's first Black woman city manager. The 570-page document closes a $66.2 million structural deficit through what the city calls "$61.7 million in reduction strategies" and the elimination of 144 full-time equivalent positions, of which 46 are filled. The cuts hit park workers, pool lifeguards, senior center coordinators, the mounted police unit, and dozens of other frontline staff. The Office of Diversity and Equity is not on the cut list.</p>
+
+<p>Three separate proposals to reduce the office's three positions were submitted during budget development. The City Manager rejected all three. The office grew from $517,019 to $568,059, a 9.9 percent increase, while 26 Park Maintenance Workers were fired and replaced with a contractor, saving the city $567,428. The two numbers are <strong>$631 apart</strong>.</p>
+
+<p>The story isn't one line item. It's an institutional structure in which equity-coded bureaucracy is treated as untouchable while real labor is treated as discretionary. The same budget that fires the park crew and closes the wading pools also funds two separate diversity recruiting operations for one fire department, one of them brand-new in this cycle. Add up every office, project, and program in the budget whose stated purpose is to advance "diversity," "equity," "inclusion," "anti-displacement," "racial equity," "social equity," or related framings, and the figure comes to roughly $48 million. The structural deficit is $66 million. Eliminating that spending alone would close most of the gap without firing a single park worker.</p>
+
+<h2 class="section"><span class="num">I.</span> What was cut</h2>
+
+<p>The budget identifies the cuts directly. The largest filled-position eliminations, and the savings each generates, are listed below in the city's own language and amounts.</p>
+
+</article>
+
+<section class="compare">
+  <div class="compare-col left">
+    <div class="compare-head">FY2026/27 Reductions</div>
+    <div class="compare-title">Workers Fired,<br>Services Cut</div>
+    <ul class="compare-list">
+      <li><span>26 Park Maintenance Workers, outsourced to a contractor</span><span class="item-amount">$567,428</span></li>
+      <li><span>11 Police Records positions</span><span class="item-amount">$913,919</span></li>
+      <li><span>5 sworn officers, entire Mounted Police Unit eliminated</span><span class="item-amount">$918,098</span></li>
+      <li><span>7 Community Service Officers, Hiring Pipeline shut down</span><span class="item-amount">$693,700</span></li>
+      <li><span>4 Older Adult Services Coordinators at Hart Senior Center</span><span class="item-amount">$329,688</span></li>
+      <li><span>1 Police Captain, Admin Services</span><span class="item-amount">$328,046</span></li>
+      <li><span>54 Aquatics positions, 4 wading pools closed</span><span class="item-amount">$499,728</span></li>
+      <li><span>19 vacant Firefighter positions plus 13 funding shifts</span><span class="item-amount">$5,391,783</span></li>
+      <li><span>14 sworn officers, RT and Natomas SRO contracts terminated</span><span class="item-amount">$2,838,012</span></li>
+      <li><span>ShotSpotter discontinued in South and East Sacramento</span><span class="item-amount">$320,892</span></li>
+      <li><span>Stipends ended for Prime Time Teen, YLOT, Junior Rec Aide</span><span class="item-amount">$200,000</span></li>
+      <li><span>2 Marina Aides, History Division</span><span class="item-amount">$45,663</span></li>
+      <li class="compare-total"><span>Total saved by cutting workers</span><span class="item-amount">$13,046,957</span></li>
+    </ul>
+  </div>
+  <div class="compare-col right">
+    <div class="compare-head">FY2026/27 Funded</div>
+    <div class="compare-title">Bureaucracy Preserved<br>or Expanded</div>
+    <ul class="compare-list">
+      <li>
+        <span>Office of Diversity and Equity (HR), 3.0 FTE
+        <span class="item-detail">Was $517,019 last year. Got a 9.9% raise. Three proposals to cut it were rejected.</span>
+        </span><span class="item-amount">$568,059</span>
+      </li>
+      <li>
+        <span>Fire Department Diversity, Outreach &amp; Recruitment, 2.0 FTE
+        <span class="item-detail">Brand new this cycle. The City already has the citywide Office of Diversity and Equity above. Now Fire pays for diversity recruiting separately, on top of that.</span>
+        </span><span class="item-amount">$338,620</span>
+      </li>
+      <li>
+        <span>Language Access Coordinator (City Manager), 1.0 FTE
+        <span class="item-detail">Made permanent in this budget. Was previously a temporary position. Plus a $250,000 project balance, $192,127 unspent.</span>
+        </span><span class="item-amount">$145,807</span>
+      </li>
+      <li>
+        <span>Office of Public Safety Accountability (OPSA), 7.0 FTE
+        <span class="item-detail">Was 11 FTE at $2,029,617. Lost 4 positions but the office and its Community Engagement Coordinator survive.</span>
+        </span><span class="item-amount">$1,340,869</span>
+      </li>
+      <li>
+        <span>Office of Violence Prevention (Police), 3.0 FTE ongoing
+        <span class="item-detail">Plus separate project balances totaling another $8.17 million in grant funds for "violence interrupter" community organizations.</span>
+        </span><span class="item-amount">$501,269</span>
+      </li>
+      <li>
+        <span>Measure U Community Engagement, 8.0 FTE
+        <span class="item-detail">Eight City Manager positions doing outreach for the Measure U sales tax program.</span>
+        </span><span class="item-amount">$1,364,823</span>
+      </li>
+      <li>
+        <span>Measure U Community Investment, 6.0 FTE
+        <span class="item-detail">Six positions managing community grants. Distinct from the engagement bucket above and from regular Economic Development.</span>
+        </span><span class="item-amount">$1,101,746</span>
+      </li>
+      <li>
+        <span>Measure U Workforce Development, 3.0 FTE
+        <span class="item-detail">Three positions on top of separately federal-funded workforce programs.</span>
+        </span><span class="item-amount">$430,850</span>
+      </li>
+      <li>
+        <span>Climate Action and Sustainability Division, 4.0 FTE
+        <span class="item-detail">Implements the Climate Action Plan. Adds a new "Climate Equity Pilot" this cycle.</span>
+        </span><span class="item-amount">$564,432</span>
+      </li>
+      <li>
+        <span>Cultural Arts Awards Program (Measure U + General Fund)
+        <span class="item-detail">Equity-themed grants to 70 nonprofit arts organizations. Active project balances total $5.6 million across funds.</span>
+        </span><span class="item-amount">$2,128,000</span>
+      </li>
+      <li>
+        <span>Mayor's Office Limited-Term Positions Project
+        <span class="item-detail">Discretionary political appointee fund. $224,134 was unspent and is now being liquidated to help close the deficit.</span>
+        </span><span class="item-amount">$568,720</span>
+      </li>
+      <li class="compare-total"><span>Total cost of bureaucracy retained</span><span class="item-amount">$9,053,195</span></li>
+    </ul>
+  </div>
+</section>
+
+<p style="text-align:center; margin: 28px auto 0; max-width: 700px; font-family: 'Source Serif 4', serif; font-size: 17px; line-height: 1.55; color: var(--ink); font-style: italic;">
+The cuts saved <strong>$13.0 million</strong>. The equity-coded bureaucracy that survived costs <strong>$9.05 million</strong>. The City Manager could have closed 70 percent of the cuts by trimming the bureaucracy column instead of the workers. She chose the workers. And these annual numbers are before the <strong>$39 million</strong> in equity-named project balances she also left untouched. Those are detailed below.
+</p>
+
+<article class="article">
+
+<p>The mounted police unit, which the budget eliminates entirely, has been part of the Sacramento Police Department since the 1970s. The four city wading pools, the only summer swim option in several lower-income neighborhoods, are closed. The Hart Senior Center loses four Program Coordinators. The Magnet Academy was proposed for elimination and partially restored only after community pushback. ShotSpotter is removed from South and East Sacramento commands but maintained in the North.</p>
+
+<div class="callout">
+  <span class="callout-label">From the Budget Message</span>
+  <p>"The Budget takes a measured approach with a goal of minimizing service impacts on Sacramentans while addressing Council priorities and ensuring financial sustainability."</p>
+  <p style="margin-top:14px; font-size:14px; color:var(--muted); font-style:italic;">Maraskeshia S. Smith, City Manager, page 16, Budget Message, April 29, 2026</p>
+</div>
+
+<h2 class="section"><span class="num">II.</span> The bureaucracy that was protected</h2>
+
+<p>The city's equity infrastructure is not one office. It is a layered system of departments, projects, advisory bodies, and resolutions that together represent ongoing operating costs in the millions and active project balances in the tens of millions. The following is a partial inventory taken directly from the budget document, with each office's stated mission paraphrased from the city's own language.</p>
+
+</article>
+
+<section class="ledger">
+  <div class="ledger-row">
+    <div>
+      <div class="ledger-name">Office of Diversity and Equity (HR)</div>
+      <div class="ledger-desc">Runs RGEAP, SCORE, the Sac Equity Mapping Atlas, the Equity Scorecard dashboard, and partners with the Government Alliance on Race and Equity to apply an "equity lens" to City programs and services.</div>
+    </div>
+    <div class="ledger-amount">$568,059<span class="fte">3.0 FTE</span></div>
+  </div>
+
+  <div class="ledger-row">
+    <div>
+      <div class="ledger-name">Fire Diversity, Outreach &amp; Recruitment</div>
+      <div class="ledger-desc">A second, brand-new diversity recruiting unit, this one inside the Fire Department, with two new positions added in this budget cycle. The City already has a separate Office of Diversity and Equity in Human Resources whose stated charge includes citywide workforce equity. The Fire Department is now paying for diversity recruiting twice. Project balance of $2.09 million, with $1.39 million still unspent. Coordinates with a separate Regional Fire Diversity Advisory Board.</div>
+    </div>
+    <div class="ledger-amount">$338,620<span class="fte">2.0 FTE</span></div>
+  </div>
+
+  <div class="ledger-row">
+    <div>
+      <div class="ledger-name">Language Access Coordinator (City Manager)</div>
+      <div class="ledger-desc">Made permanent in this budget cycle. Released a Language Access Policy and launched the "I Speak" campaign. Separate $250,000 project balance, $192,127 unspent.</div>
+    </div>
+    <div class="ledger-amount">$145,807<span class="fte">1.0 FTE</span></div>
+  </div>
+
+  <div class="ledger-row">
+    <div>
+      <div class="ledger-name">Office of Public Safety Accountability (OPSA)</div>
+      <div class="ledger-desc">Created after the Stephon Clark protests. Investigates police and fire misconduct complaints. Lost 4 of 11 positions this cycle but the office continues, including the Community Engagement Coordinator.</div>
+    </div>
+    <div class="ledger-amount">$1,340,869<span class="fte">7.0 FTE</span></div>
+  </div>
+
+  <div class="ledger-row">
+    <div>
+      <div class="ledger-name">Office of Violence Prevention (OVP, Police)</div>
+      <div class="ledger-desc">Administers the Gang Prevention Task Force and Evidence-Based Community Violence Interruption (EBCVIDS) initiative through grants to community-based "credible messenger" organizations.</div>
+    </div>
+    <div class="ledger-amount">$501,269<span class="fte">3.0 FTE ops</span></div>
+  </div>
+
+  <div class="ledger-row">
+    <div>
+      <div class="ledger-name">Measure U, Community Engagement (City Manager)</div>
+      <div class="ledger-desc">Eight positions in the City Manager's Office of Innovation and Economic Development whose stated purpose is community outreach for the Measure U sales tax program.</div>
+    </div>
+    <div class="ledger-amount">$1,364,823<span class="fte">8.0 FTE</span></div>
+  </div>
+
+  <div class="ledger-row">
+    <div>
+      <div class="ledger-name">Measure U, Community Investment (City Manager)</div>
+      <div class="ledger-desc">Six positions managing community-grant disbursement and investment. Distinct from Economic Development proper.</div>
+    </div>
+    <div class="ledger-amount">$1,101,746<span class="fte">6.0 FTE</span></div>
+  </div>
+
+  <div class="ledger-row">
+    <div>
+      <div class="ledger-name">Measure U, Workforce Development (City Manager)</div>
+      <div class="ledger-desc">Three positions on top of separately grant-funded federal Workforce Innovation and Opportunity Act programs. Funded by Measure U sales tax.</div>
+    </div>
+    <div class="ledger-amount">$430,850<span class="fte">3.0 FTE</span></div>
+  </div>
+
+  <div class="ledger-row">
+    <div>
+      <div class="ledger-name">Climate Action and Sustainability Division</div>
+      <div class="ledger-desc">Four positions implementing the Climate Action &amp; Adaptation Plan. Launches a new "Climate Equity Pilot" in FY2026/27 to advance "equitable Climate Action implementation through community-led projects."</div>
+    </div>
+    <div class="ledger-amount">$564,432<span class="fte">4.0 FTE</span></div>
+  </div>
+
+  <div class="ledger-row">
+    <div>
+      <div class="ledger-name">Cultural Arts Awards Program</div>
+      <div class="ledger-desc">$926,277 awarded to 70 nonprofit arts organizations through Measure U for FY2026/27. Active project balances total $5.6 million across General Fund, Measure U, and Community Center funds.</div>
+    </div>
+    <div class="ledger-amount">$2,128,000<span class="fte">project</span></div>
+  </div>
+
+  <div class="ledger-row">
+    <div>
+      <div class="ledger-name">Mayor's Office Limited-Term Positions</div>
+      <div class="ledger-desc">$568,720 project budget, of which $224,134 was unspent and is now being liquidated to help close the deficit. Used to fund discretionary political appointees on a temporary basis.</div>
+    </div>
+    <div class="ledger-amount">$568,720<span class="fte">project</span></div>
+  </div>
+
+  <div class="ledger-row ledger-total">
+    <div class="ledger-name">Subtotal: ongoing operations</div>
+    <div class="ledger-amount">$9.05 million<span class="fte">37.0 FTE</span></div>
+  </div>
+</section>
+
+<article class="article">
+
+<div class="callout">
+  <span class="callout-label">Two Diversity Offices, Same Job</span>
+  <p>The Office of Diversity and Equity in Human Resources, at $568,059 a year for 3.0 FTE, exists to apply an "equity lens" to City programs and "workforce equity" across all departments. The Fire Department's own Diversity, Outreach &amp; Recruitment unit, at $338,620 a year for 2.0 FTE, exists to recruit a more diverse fire department. The Fire Department is one of those City departments. The City Manager rejected three separate proposals to reduce the citywide diversity office during budget development, and approved two brand-new positions inside Fire to do work the citywide office is already paid to coordinate. The total cost of running diversity recruiting twice for one department is roughly $900,000 a year.</p>
+</div>
+
+<p>That figure does not include the Police Department's Office of Strategy and Compliance, which exists primarily to manage compliance with reform-era mandates including the Racial and Identity Profiling Act (AB 953), Senate Bills 1421 and 16, body-worn camera audits, force review, and engagement with the Sacramento Community Police Review Commission. That division now totals $29.6 million across 47 positions, expanded from its pre-2020 footprint.</p>
+
+<p>Nor does it include the Department of Community Response, a $41.5 million homelessness-services operation with 39 positions, much of which is structured around community outreach contracts rather than direct shelter or housing.</p>
+
+<h2 class="section"><span class="num">III.</span> The slush funds</h2>
+
+<p>Beyond ongoing operations, the budget identifies dozens of multi-year operating projects with explicit equity, inclusion, anti-displacement, or racial-justice naming. Many of these projects sit on substantial unspent balances, even as the city declares a deficit. The figures below are taken from the budget's Existing Operating Projects schedule (pages 413, 415):</p>
+
+</article>
+
+<section class="ledger">
+  <div class="ledger-row">
+    <div>
+      <div class="ledger-name">Stockton Boulevard Anti-Displacement Fund</div>
+      <div class="ledger-desc">A cash assistance program created to help residents and businesses near the new UC Davis Aggie Square campus in case "gentrification" displaces them. Total budgeted: $5,000,000. Still unspent: $1,908,536. Project code I02189030.</div>
+    </div>
+    <div class="ledger-amount">$5,000,000</div>
+  </div>
+
+  <div class="ledger-row">
+    <div>
+      <div class="ledger-name">AFSCME Anti-Displacement Fund</div>
+      <div class="ledger-desc">More anti-displacement money, this time funneled through AFSCME, the city employees' union. Total budgeted: $5,000,000. Still unspent: $3,660,000. Project code E02000120.</div>
+    </div>
+    <div class="ledger-amount">$5,000,000</div>
+  </div>
+
+  <div class="ledger-row">
+    <div>
+      <div class="ledger-name">Inclusive Economic Development Multi-Year Project</div>
+      <div class="ledger-desc">An ongoing "inclusive economic development" fund. The "MYOP" label is City budget shorthand for multi-year operating project, a category of money that rolls over year after year and never has to compete in the regular budget cycle. Allocates $3.84 million for FY2026/27 and another $3.54 million already lined up for FY2027/28. Project code I02180900.</div>
+    </div>
+    <div class="ledger-amount">$3,837,898</div>
+  </div>
+
+  <div class="ledger-row">
+    <div>
+      <div class="ledger-name">CORE Capital Loan Program</div>
+      <div class="ledger-desc">Loans for cannabis dispensaries owned by people who qualify under "social equity" criteria. CORE stands for Cannabis Opportunity Reinvestment and Equity. Total: $2,848,185. Project code I02420000.</div>
+    </div>
+    <div class="ledger-amount">$2,848,185</div>
+  </div>
+
+  <div class="ledger-row">
+    <div>
+      <div class="ledger-name">Inclusive Business Assistance</div>
+      <div class="ledger-desc">Equity-targeted business loans and grants for businesses owned by underrepresented groups. Total $2,448,113, fully committed. Project code I02612040.</div>
+    </div>
+    <div class="ledger-amount">$2,448,113</div>
+  </div>
+
+  <div class="ledger-row">
+    <div>
+      <div class="ledger-name">Citywide Equity Initiative</div>
+      <div class="ledger-desc">A general-purpose "equity" fund with no specific stated program. Total $1,927,722. $693,769 still unspent. Project code I02000400.</div>
+    </div>
+    <div class="ledger-amount">$1,927,722</div>
+  </div>
+
+  <div class="ledger-row">
+    <div>
+      <div class="ledger-name">Truth, Reform, and Reconciliation Project</div>
+      <div class="ledger-desc">A project ostensibly for examining the city's role in racial injustice. Budgeted $320,000. Spent $0. The full balance is now being liquidated to help close the deficit. Project code I01140100.</div>
+    </div>
+    <div class="ledger-amount">$320,000</div>
+  </div>
+
+  <div class="ledger-row">
+    <div>
+      <div class="ledger-name">Sacramento Municipal Reparations Commission</div>
+      <div class="ledger-desc">A standing commission studying potential reparations payments. $200,000 fully spent. Commission remains active. Project code I01002100.</div>
+    </div>
+    <div class="ledger-amount">$200,000</div>
+  </div>
+
+  <div class="ledger-row">
+    <div>
+      <div class="ledger-name">FY2022 Multi-Council City's Racial Equity</div>
+      <div class="ledger-desc">A racial equity project from the 2022 budget cycle. Total $300,000. $261,650 still untouched four years later. Project code I02004000.</div>
+    </div>
+    <div class="ledger-amount">$300,000</div>
+  </div>
+
+  <div class="ledger-row">
+    <div>
+      <div class="ledger-name">Digital Equity Program</div>
+      <div class="ledger-desc">Internet access and device program for low-income households. $400,000 from the General Fund and another $400,000 from the Measure U sales tax. Project code I07001100.</div>
+    </div>
+    <div class="ledger-amount">$800,000</div>
+  </div>
+
+  <div class="ledger-row">
+    <div>
+      <div class="ledger-name">Cannabis Equity Grants (state-funded, multi-year)</div>
+      <div class="ledger-desc">State-funded grants administered through California's Office of Business and Economic Development (Go-Biz) for "social equity" cannabis applicants. Multi-year totals: $1.56M FY22/23, $1.25M FY23/24, $1.68M FY24/25, $1.20M California Local Equity Grant, $2.5M incoming for FY26. Requires a $1 million city match.</div>
+    </div>
+    <div class="ledger-amount">$8,191,621</div>
+  </div>
+
+  <div class="ledger-row">
+    <div>
+      <div class="ledger-name">Office of Violence Prevention, project balances</div>
+      <div class="ledger-desc">A pool of money used to fund grants to community organizations doing "violence interrupter" work, separate from the OVP's ongoing operating budget. $5.17 million from Measure U, $2.65 million from the federal EBCVIDS program, plus $356,000 from the General Fund.</div>
+    </div>
+    <div class="ledger-amount">$8,173,728</div>
+  </div>
+
+  <div class="ledger-row ledger-total">
+    <div class="ledger-name">Subtotal: equity-named project balances</div>
+    <div class="ledger-amount">$39.05 million</div>
+  </div>
+</section>
+
+<article class="article">
+
+<h2 class="section"><span class="num">IV.</span> The resolution that makes it permanent</h2>
+
+<p>The city's equity infrastructure is not optional. Section 20.5 of the FY2026/27 Budget Resolution, which the Council will vote to adopt on June 9, 2026, codifies an "equity lens" requirement on every future budget recommendation:</p>
+
+<blockquote>
+"The City Manager shall begin using an equity lens in the review of all budgetary recommendations to Council including the annual budget, midyear budget and staff reports as soon as practical after development of a shared definition of equity in coordination with the community, development of associated outcomes and measures and Council's creation and adoption of an Equity Resolution."
+<span class="source">FY2026/27 Budget Resolution, Section 20.5, page 562</span>
+</blockquote>
+
+<p>This is the binding text that converts equity programming from a discretionary line item into a procedural requirement. The May 12, 2026 Council meeting agenda includes a formal presentation titled "Budget Equity Lens." The Office of Diversity and Equity is currently developing three new tools for departmental use: an "Online Sac Equity Impact Planner &amp; Assessment Tool," a "Sac Equity Mapping Atlas," and an "Equity Impact Statement For Staff Reports" requirement.</p>
+
+<p>From the budget's own description of the Office of Diversity and Equity, on page 285:</p>
+
+<blockquote>
+"The Office of Diversity and Equity (ODE) expanded the Race and Gender Equity Action Plan (RGEAP) outcomes to include workforce equity and internal and external equity performance measures related to programs, services, and processes. ODE also facilitated ongoing capacity building for City department equity teams to learn and apply the Results-Based Accountability Framework... In collaboration with the Racial Equity Committee, City Manager's Office, and Racial Equity Alliance, ODE developed the Sacramento Centered on Racial Equity Initiative (SCORE) Work Strategy and Plan. This plan serves as a living roadmap for the implementation of the deliverables outlined in the Operationalizing Racial Equity Resolution 2025-0354."
+<span class="source">FY2026/27 Proposed Budget, page 285</span>
+</blockquote>
+
+<h2 class="section"><span class="num">V.</span> The deficit math</h2>
+
+<p>The City declared a $66 million structural deficit. The cuts above in Section I total $13 million. The equity-coded spending the City Manager left in place totals $48 million across the two ledgers in Sections II and III. The cuts that hurt workers were small. The protected equity bureaucracy was almost four times bigger.</p>
+
+</article>
+
+<div class="math-box">
+  <div class="math-label">FY2026/27, the math, traced directly to the budget</div>
+
+  <div class="math-row" style="font-style:italic; color:var(--muted); padding-bottom:6px;">
+    <span>The cuts that hurt workers and services</span>
+    <span class="math-amount" style="color:var(--muted);"></span>
+  </div>
+  <div class="math-row">
+    <span>Total of the cuts itemized in Section I above</span>
+    <span class="math-amount">$13.05M</span>
+  </div>
+
+  <div class="math-row" style="font-style:italic; color:var(--muted); padding-bottom:6px; padding-top:18px; border-top:1px dotted var(--rule-soft);">
+    <span>The equity-coded spending the City Manager protected instead</span>
+    <span class="math-amount" style="color:var(--muted);"></span>
+  </div>
+  <div class="math-row">
+    <span>Annual cost of bureaucracy retained (Section II ledger)</span>
+    <span class="math-amount">$9.05M</span>
+  </div>
+  <div class="math-row">
+    <span>Equity-named project balances left untouched (Section III ledger)</span>
+    <span class="math-amount">$39.05M</span>
+  </div>
+  <div class="math-row total">
+    <span>Total equity-coded spending the City kept</span>
+    <span class="math-amount">$48.10M</span>
+  </div>
+</div>
+
+<article class="article">
+
+<p>The argument is simple. The City Manager could have eliminated every cut in Section I three times over by redirecting the $48 million in equity-coded spending she chose to protect. The headline cuts that fired park workers and closed wading pools save $13 million. The bureaucracy and project balances she left in place are $48 million. She had a choice and she made it. The numbers above are not contested figures; they are taken directly from the budget document the City released, with project codes preserved.</p>
+
+<p>The remaining gap between the cuts and the deficit, roughly $4.5 million, is closed by fund balance use and small revenue adjustments. The budget also leans on $13 million of one-time strategies that cannot repeat next year. When those are gone, the same fight returns. Without the slush funds to liquidate.</p>
+
+<h2 class="section"><span class="num">VI.</span> The bill kicked to next year</h2>
+
+<p>The City's own budget document admits, in plain language, that one-time strategies do not help future years. The strategy of choice this cycle is one-time. The strategy not chosen, cutting the ongoing equity bureaucracy, is the only one that would have actually reduced next year's deficit.</p>
+
+<blockquote>
+"The City partially addressed the structural budget deficit during the FY2024/25 and FY2025/26 budget processes by closing funding gaps with a combination of one-time and ongoing budget balancing strategies. The ongoing strategies reduced projected deficits in future fiscal years while the one-time strategies only applied to one fiscal year and did not reduce projected deficits in subsequent years."
+<span class="source">FY2026/27 Proposed Budget, Budget Message, page 17</span>
+</blockquote>
+
+<p>Translated, the City's own analysis says that one-time strategies do not fix the structural problem. They buy time. The Office of Diversity and Equity at $568,059 a year is an ongoing cost. The Fire Department's new diversity unit at $338,620 a year is an ongoing cost. The Measure U community engagement positions at $1.36 million a year are an ongoing cost. Cutting any of them reduces next year's deficit and the year after that. By contrast, sweeping a $320,000 unspent balance from the Truth and Reconciliation Project is a one-time win that closes this year's gap and contributes nothing to fixing the next one.</p>
+
+<p>The City Manager picked the one-time path. The unspent project balances she did sweep, the Truth and Reconciliation balance, the unspent Mayor's Office Limited-Term Positions money, smaller commission stipend rollbacks, total roughly one million dollars of equity-coded liquidations. She left $39 million in equity-named project balances untouched, including the full Stockton Boulevard Anti-Displacement Fund, the full AFSCME Anti-Displacement Fund, and the bulk of the cannabis equity grants. Those balances will continue to sit on the books, available for the same one-time treatment in future cycles, until they're gone too.</p>
+
+<p>Next year the bureaucracy will be back asking for the same money. The slush funds will be smaller. The structural problem will be larger. The City Manager's own budget says so.</p>
+
+<h2 class="section"><span class="num">VII.</span> What the priorities reveal</h2>
+
+<p>A budget is the most honest document a government produces. It strips away mission statements and resolutions and reduces a city to two columns: what it pays for, and what it does not. The FY2026/27 budget pays for the Office of Diversity and Equity. It pays for the Race and Gender Equity Action Plan. It pays for the Sacramento Centered on Racial Equity Initiative. It pays for an "equity lens" on every staff report going forward. It pays for community engagement coordinators, community investment managers, anti-displacement programs whose funds sit unspent for years, reparations commissions, and a Truth, Reform, and Reconciliation Project that never spent a dollar.</p>
+
+<p>It does not pay for 26 Park Maintenance Workers. It does not pay for four wading pools. It does not pay for the Hart Senior Center's full programming. It does not pay for the mounted police unit. It does not pay for ShotSpotter coverage in South or East Sacramento. It does not pay for Police Records staff, traffic enforcement, or eleven of the seventeen sworn vacancies originally proposed for elimination.</p>
+
+<p>The city's stated framing is that the budget "minimizes service impacts on Sacramentans." The choice of which services count, and which Sacramentans count, is the budget itself.</p>
+
+<p>Sacramento's first Black woman city manager arrived in January. The Office of Diversity and Equity, the Race and Gender Equity Action Plan, the Sacramento Centered on Racial Equity Initiative, the Fire Department's brand-new diversity recruiting unit, and the $39 million in equity-named project balances all survived her first budget. Twenty-six park workers, the four wading pools, the mounted police unit, the Hart Senior Center coordinators, and ShotSpotter coverage in South and East Sacramento did not. Those were her choices. The two numbers in the headline are $631 apart.</p>
+
+<div class="tags">
+  <span class="tag">Sacramento</span>
+  <span class="tag">Budget</span>
+  <span class="tag">DEI</span>
+  <span class="tag">Public Records</span>
+  <span class="tag">Investigation</span>
+</div>
+
+</article>
+
+<footer class="article-foot">
+  All figures sourced directly to the <a href="https://www.cityofsacramento.gov/content/dam/portal/finance/Budget/26-27-proposed/FY2026_27_Proposed_Operating_Budget_Web_v2.pdf" target="_blank" rel="noopener">City of Sacramento FY2026/27 Proposed Operating Budget</a>, released April 29, 2026 by the Department of Finance, Budget, Policy and Strategic Planning Division. Project codes preserved for verification. Budget hearings begin May 5, 2026; Council adoption is scheduled for June 9, 2026.<br><br>
+  Published by <a href="https://dont-shoot-the-data.github.io">Don't Shoot The Data</a>.
+</footer>
+
+</div>
+</body>
+</html>
